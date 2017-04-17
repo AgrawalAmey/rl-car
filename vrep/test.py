@@ -2,9 +2,12 @@ from env import *
 
 rl_bot = RlBot()
 
-for i in range(10000):
-    observations = rl_bot.step([0.1, 0.1])
-    print(observations['proxy_sensor_vals'])
-    print(observations['light_sensor_vals'])
-
-rl_bot.distroy()
+try:
+    for i in range(10000):
+        observations, reward = rl_bot.step([0.0, 0.0])
+        # print(observations['proxy_sensor'])
+        print(observations['light_sensor'])
+        print(reward['light_sensor'])
+except KeyboardInterrupt:
+    rl_bot.destroy()
+    print('exiting')

@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 
 
 class RlBot(object):
+
     def __init__(self):
         # just in case, close all opened connections
         vrep.simxFinish(-1)
@@ -57,7 +58,7 @@ class RlBot(object):
             # Append to the list of sensors
             self.light_sensors.append(sensor_handle)
 
-    def distroy(self):
+    def destroy(self):
         vrep.simxStopSimulation(self.client_id, vrep.simx_opmode_blocking)
 
     def reset(self):
@@ -90,32 +91,29 @@ class RlBot(object):
             # Fetch the initial value in the suggested mode
             _, _, image = vrep.simxGetVisionSensorImage(
                 self.client_id, sensor, 1, vrep.simx_opmode_blocking)
+            # extract image from list
+            image = image[0] if len(image) else -1
             # Append to the list of values
             observations['light_sensor'].append(image)
 
         # vrep gives a positive value for the black strip and negative for the
         # floor so convert it into 0 and 1
 
-        observations['light_sensor'] = np.asarray(
-            observations['light_sensor'])
-        observations['light_sensor'] = observations['light_sensor'].reshape(-1)
-        mask = observations['light_sensor'] > 0
-        observations['light_sensor'][:] = 0
-        observations['light_sensor'][mask] = 1
+        observations['light_sensor'] = np.asarray(observations['light_sensor'])
+        observations['light_sensor'] = np.sign(observations['light_sensor'])
 
         # Assign reward
         reward = {}
 
         # For light sensors
-
         # If any of the center 2 sensors is 1 give high reward
-        if np.sum(observations['light_sensor'][[3, 4]]) > 0:
+        if (observations['light_sensor'][[3, 4]] > 0).any():
             reward['light_sensor'] = 3
         # If any of second, third, sixth or seventh is 1
-        elif np.sum(observations['light_sensor'][[1, 2, 5, 6]]) > 0:
+        elif (observations['light_sensor'][[1, 2, 5, 6]] > 0).any():
             reward['light_sensor'] = 1
         # If first or last are high
-        elif np.sum(observations['light_sensor'][[0, 7]]) > 0:
+        elif (observations['light_sensor'][[0, 7]] > 0).any():
             reward['light_sensor'] = 0
         # Bot is completly out of line
         else:
@@ -130,6 +128,8 @@ class RlBot(object):
         if r > 2:
             r = 2
 
-        reward['light_sensor'], reward['proxy_sensor'], reward['combined'] += r
+        reward['light_sensor'] += r
+        reward['proxy_sensor'] += r
+        # reward['combined'] += r
 
         return observations, reward
