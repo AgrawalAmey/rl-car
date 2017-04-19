@@ -1,13 +1,13 @@
-from env import *
+from env import RLBot
 
-rl_bot = RlBot()
+bot = RLBot()
 
 try:
     for i in range(10000):
-        observations, reward = rl_bot.step([0.0, 0.0])
+        observations, reward = bot.step([1, 1])
         # print(observations['proxy_sensor'])
         print(observations['light_sensor'])
         print(reward['light_sensor'])
 except KeyboardInterrupt:
-    rl_bot.destroy()
+    bot.destroy()
     print('exiting')

@@ -7,7 +7,7 @@ import math
 import matplotlib.pyplot as plt
 
 
-class RlBot(object):
+class RLBot(object):
 
     def __init__(self):
         # just in case, close all opened connections
@@ -23,8 +23,7 @@ class RlBot(object):
             sys.exit('Could not connect')
 
         # Restart the simulation
-        vrep.simxStopSimulation(self.client_id, vrep.simx_opmode_blocking)
-        vrep.simxStartSimulation(self.client_id, vrep.simx_opmode_blocking)
+        self.reset()
 
         # Get handles
         self.get_handles()
@@ -63,8 +62,11 @@ class RlBot(object):
 
     def reset(self):
         # Restart the simulation
-        vrep.simxStopSimulation(self.client_id, vrep.simx_opmode_blocking)
-        vrep.simxStartSimulation(self.client_id, vrep.simx_opmode_blocking)
+        stop = vrep.simxStopSimulation(self.client_id, vrep.simx_opmode_blocking)
+        stop = vrep.simxStopSimulation(self.client_id, vrep.simx_opmode_blocking)
+        start = vrep.simxStartSimulation(self.client_id, vrep.simx_opmode_blocking)
+        start = vrep.simxStartSimulation(self.client_id, vrep.simx_opmode_blocking)
+        print("Resetting Simulation. Stop Code: {} Start Code: {}".format(stop, start))
 
     def step(self, action):
         # Activate the motors
@@ -108,25 +110,24 @@ class RlBot(object):
         # For light sensors
         # If any of the center 2 sensors is 1 give high reward
         if (observations['light_sensor'][[3, 4]] > 0).any():
-            reward['light_sensor'] = 3
+            reward['light_sensor'] = 5
         # If any of second, third, sixth or seventh is 1
         elif (observations['light_sensor'][[1, 2, 5, 6]] > 0).any():
-            reward['light_sensor'] = 1
+            reward['light_sensor'] = 2
         # If first or last are high
         elif (observations['light_sensor'][[0, 7]] > 0).any():
             reward['light_sensor'] = 0
         # Bot is completly out of line
         else:
-            reward['light_sensor'] = -2
+            reward['light_sensor'] = -5
 
         # For proximity sensors
         reward['proxy_sensor'] = 0
 
+
         # Should be rewarded for quick movement
-        r = action[0] + action[1]
+        r = np.sum(np.sign(action)) * 2
         # But no more than 2
-        if r > 2:
-            r = 2
 
         reward['light_sensor'] += r
         reward['proxy_sensor'] += r
