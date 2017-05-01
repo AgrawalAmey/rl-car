@@ -1,16 +1,3 @@
 \begin{thebibliography}{}
 
-\bibitem[Mnih et~al., 2013]{mnih2013atari}
-Mnih, V., Kavukcuoglu, K., Silver, D., Graves, A., Antonoglou, I., Wierstra,
-  D., and Riedmiller, M. (2013).
-\newblock Playing atari with deep reinforcement learning.
-\newblock {\em arXiv preprint arXiv:1312.5602}.
-
-\bibitem[Mnih et~al., 2015]{mnih2015nature}
-Mnih, V., Kavukcuoglu, K., Silver, D., Rusu, A.~A., Veness, J., Bellemare,
-  M.~G., Graves, A., Riedmiller, M., Fidjeland, A.~K., Ostrovski, G., et~al.
-  (2015).
-\newblock Human-level control through deep reinforcement learning.
-\newblock {\em Nature}, 518(7540):529--533.
-
 \end{thebibliography}

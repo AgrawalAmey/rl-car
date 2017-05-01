@@ -1,8 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.10)  29 APR 2017 03:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.10)  1 MAY 2017 15:49
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**/media/zero/data1/projects/ongoing/rl_car/final_report/report
+**report.tex
 (/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex
 LaTeX2e <2016/03/31> patch level 3
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
@@ -33,20 +34,20 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 \bibindent=\dimen103
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 ) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
@@ -55,25 +56,39 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 ))
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen106
+\captionmargin@=\dimen107
+\captionwidth=\dimen108
+\caption@tempdima=\dimen109
+\caption@indent=\dimen110
+\caption@parindent=\dimen111
+\caption@hangindent=\dimen112
+)
+\c@ContinuedFloat=\count89
 ) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
-\c@tracingmulticols=\count89
+\c@tracingmulticols=\count90
 \mult@box=\box26
-\multicol@leftmargin=\dimen106
-\c@unbalance=\count90
-\c@collectmore=\count91
-\doublecol@number=\count92
-\multicoltolerance=\count93
-\multicolpretolerance=\count94
-\full@width=\dimen107
-\page@free=\dimen108
-\premulticols=\dimen109
-\postmulticols=\dimen110
+\multicol@leftmargin=\dimen113
+\c@unbalance=\count91
+\c@collectmore=\count92
+\doublecol@number=\count93
+\multicoltolerance=\count94
+\multicolpretolerance=\count95
+\full@width=\dimen114
+\page@free=\dimen115
+\premulticols=\dimen116
+\postmulticols=\dimen117
 \multicolsep=\skip43
 \multicolbaselineskip=\skip44
 \partial@page=\box27
 \last@line=\box28
-\maxbalancingoverflow=\dimen111
+\maxbalancingoverflow=\dimen118
 \mult@rightbox=\box29
 \mult@grightbox=\box30
 \mult@gfirstbox=\box31
@@ -95,17 +110,17 @@ Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
 \@tempa=\box47
 \@tempa=\box48
 \@tempa=\box49
-\c@columnbadness=\count95
-\c@finalcolumnbadness=\count96
-\last@try=\dimen112
-\multicolovershoot=\dimen113
-\multicolundershoot=\dimen114
+\c@columnbadness=\count96
+\c@finalcolumnbadness=\count97
+\last@try=\dimen119
+\multicolovershoot=\dimen120
+\multicolundershoot=\dimen121
 \mult@nat@firstbox=\box50
 \colbreak@box=\box51
-\mc@col@check@num=\count97
+\mc@col@check@num=\count98
 ) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2016/06/24 v6.83q Hypertext links for LaTeX
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
@@ -126,15 +141,13 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
-)
+Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
-)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO)
 Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
 Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
 )
@@ -154,14 +167,14 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen115
-\Hy@linkcounter=\count98
-\Hy@pagecounter=\count99
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+\@linkdim=\dimen122
+\Hy@linkcounter=\count99
+\Hy@pagecounter=\count100
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2016/06/24 v6.83q Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count100
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+\Hy@SavedSpaceFactor=\count101
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4486.
@@ -171,16 +184,16 @@ Package hyperref Info: Plain pages OFF on input line 4501.
 Package hyperref Info: Backreferencing OFF on input line 4506.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4735.
-\c@Hy@tempcnt=\count101
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\c@Hy@tempcnt=\count102
+ (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5088.
-\XeTeXLinkMargin=\dimen116
-\Fld@menulength=\count102
-\Field@Width=\dimen117
-\Fld@charsize=\dimen118
+\XeTeXLinkMargin=\dimen123
+\Fld@menulength=\count103
+\Field@Width=\dimen124
+\Fld@charsize=\dimen125
 Package hyperref Info: Hyper figures OFF on input line 6342.
 Package hyperref Info: Link nesting OFF on input line 6347.
 Package hyperref Info: Hyper index ON on input line 6350.
@@ -190,70 +203,70 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6367.
 Package hyperref Info: PDF/A mode OFF on input line 6372.
 LaTeX Info: Redefining \ref on input line 6412.
 LaTeX Info: Redefining \pageref on input line 6416.
-\Hy@abspage=\count103
-\c@Item=\count104
-\c@Hfootnote=\count105
+\Hy@abspage=\count104
+\c@Item=\count105
+\c@Hfootnote=\count106
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2016/06/24 v6.83q Hyperref driver for pdfTeX
-\Fld@listcount=\count106
-\c@bookmark@seq@number=\count107
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+\Fld@listcount=\count107
+\c@bookmark@seq@number=\count108
+ (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-82.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 282.
 )
 \Hy@SectionHShift=\skip45
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2016/06/28 v2.15d AMS math features
 \@mathmargin=\skip46
+
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks15
-\ex@=\dimen119
+\ex@=\dimen126
 )) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen120
+\pmbraise@=\dimen127
 ) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count108
+\inf@bad=\count109
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count109
-\leftroot@=\count110
+\uproot@=\count110
+\leftroot@=\count111
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count111
-\DOTSCASE@=\count112
+\classnum@=\count112
+\DOTSCASE@=\count113
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box52
 \strutbox@=\box53
-\big@size=\dimen121
+\big@size=\dimen128
 LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
-\macc@depth=\count113
-\c@MaxMatrixCols=\count114
+\macc@depth=\count114
+\c@MaxMatrixCols=\count115
 \dotsspace@=\muskip11
-\c@parentequation=\count115
-\dspbrk@lvl=\count116
+\c@parentequation=\count116
+\dspbrk@lvl=\count117
 \tag@help=\toks16
-\row@=\count117
-\column@=\count118
-\maxfields@=\count119
+\row@=\count118
+\column@=\count119
+\maxfields@=\count120
 \andhelp@=\toks17
-\eqnshift@=\dimen122
-\alignsep@=\dimen123
-\tagshift@=\dimen124
-\tagwidth@=\dimen125
-\totwidth@=\dimen126
-\lineht@=\dimen127
+\eqnshift@=\dimen129
+\alignsep@=\dimen130
+\tagshift@=\dimen131
+\tagwidth@=\dimen132
+\totwidth@=\dimen133
+\lineht@=\dimen134
 \@envbody=\toks18
 \multlinegap=\skip47
 \multlinetaggap=\skip48
@@ -261,11 +274,10 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 LaTeX Info: Redefining \[ on input line 2739.
 LaTeX Info: Redefining \] on input line 2740.
 ) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
-Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
-nment
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+ (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count120
+\c@float@type=\count121
 \float@exts=\toks20
 \float@box=\box54
 \@float@everytoks=\toks21
@@ -274,25 +286,34 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \@float@every@algorithm=\toks22
-\c@algorithm=\count121
-) (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+\c@algorithm=\count122
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
 Package: algpseudocode 
-(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
 Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count122
-\c@ALG@rem=\count123
-\c@ALG@nested=\count124
+\c@ALG@line=\count123
+\c@ALG@rem=\count124
+\c@ALG@nested=\count125
 \ALG@tlm=\skip49
 \ALG@thistlm=\skip50
-\c@ALG@Lnr=\count125
-\c@ALG@blocknr=\count126
-\c@ALG@storecount=\count127
-\c@ALG@tmpcounter=\count128
+\c@ALG@Lnr=\count126
+\c@ALG@blocknr=\count127
+\c@ALG@storecount=\count128
+\c@ALG@tmpcounter=\count129
 \ALG@tmplength=\skip51
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (./report.aux)
+) (/media/zero/data1/projects/ongoing/rl_car/final_report/report.aux)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
@@ -309,101 +330,540 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count129
-\scratchdimen=\dimen128
+\scratchcounter=\count130
+\scratchdimen=\dimen135
 \scratchbox=\box56
-\nofMPsegments=\count130
-\nofMParguments=\count131
+\nofMPsegments=\count131
+\nofMParguments=\count132
 \everyMPshowfont=\toks23
-\MPscratchCnt=\count132
-\MPscratchDim=\dimen129
-\MPnumerator=\count133
-\makeMPintoPDFobject=\count134
+\MPscratchCnt=\count133
+\MPscratchDim=\dimen136
+\MPnumerator=\count134
+\makeMPintoPDFobject=\count135
 \everyMPtoPDFconversion=\toks24
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 438.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box57
 Package hyperref Info: Link coloring OFF on input line 13.
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count135
+\c@section@level=\count136
 )
 LaTeX Info: Redefining \ref on input line 13.
 LaTeX Info: Redefining \pageref on input line 13.
 LaTeX Info: Redefining \nameref on input line 13.
-(./report.out) (./report.out)
+ (/media/zero/data1/projects/ongoing/rl_car/final_report/report.out) (/media/zero/data1/projects/ongoing/rl_car/final_report/report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
-<logo.png, id=68, 1027.84pt x 1027.84pt>
+ <logo.png, id=72, 1027.84pt x 1027.84pt>
 File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png used on input line 37.
+ <use logo.png>
+Package pdftex.def Info: logo.png used on input line 32.
 (pdftex.def)             Requested size: 155.99762pt x 155.98863pt.
-[1
+ [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./logo.png>] (./report.toc
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </media/zero/data1/projects/ongoing/rl_car/final_report/logo.png>]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.65 \end{titlepage}
+                     [1]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.76 \end{titlepage}
+                     [1] (/media/zero/data1/projects/ongoing/rl_car/final_report/report.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
+LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
 \tf@toc=\write4
 \openout4 = `report.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.65 \chapter
+l.81 \chapter
              {Introduction} [1
 
 ]
 Chapter 1.
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no “ in font cmr12!
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--95
+
+ []
+
 [2
 
-] [3]
+]
 Chapter 2.
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
-<deepQ.png, id=111, 1108.14pt x 639.38875pt>
-File: deepQ.png Graphic file (type png)
-<use deepQ.png>
-Package pdftex.def Info: deepQ.png used on input line 89.
-(pdftex.def)             Requested size: 350.99762pt x 202.52074pt.
-[4
+
+LaTeX Warning: Citation `siegelmann92' on page 3 undefined on input line 107.
+
+
+LaTeX Warning: File `rnn0.png' not found on input line 111.
+
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:111: Package pdftex.def Error: File `rnn0.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.111 ...degraphics[width=0.8\linewidth]{rnn0.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[3
 
 ]
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 93.
-! Text line contains an invalid character.
-l.99 		\State With probability ^^O
-                                  select a random action a_t 
-Here is how much of TeX's memory you used:
- 6489 strings out of 493013
- 95868 string characters out of 6135682
- 185857 words of memory out of 5000000
- 9946 multiletter control sequences out of 15000+600000
- 8310 words of font info for 30 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 29i,5n,25p,605b,387s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-!  ==> Fatal error occurred, no output PDF file produced!
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 115.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Citation `bengio94' on page 4 undefined on input line 123.
+
+
+LaTeX Warning: Citation `lstm97' on page 4 undefined on input line 129.
+
+
+Overfull \hbox (6.39319pt too wide) in paragraph at lines 129--133
+\OT1/cmr/m/n/12 The land-mark pub-li-ca-tion of [[]] in-tro-duced Long Short-Term Mem-ory (LSTM)
+ []
+
+[4]
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:135: Undefined control sequence.
+l.135 \citep
+            {graves2014}, text generation \citep{sutskever2011} and protein
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:135: Undefined control sequence.
+l.135 \citep{graves2014}, text generation \citep
+                                                {sutskever2011} and protein
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:136: Undefined control sequence.
+l.136 secondary structure prediction \citep
+                                           {sonderby2014protein}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: File `lstm0.png' not found on input line 139.
+
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:139: Package pdftex.def Error: File `lstm0.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.139 ...ludegraphics[width=\linewidth]{lstm0.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 143.
+See the caption package documentation for explanation.
+
+[5]
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:149: LaTeX Error: Illegal character in array arg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.149 $$ \left[\begin{array}{a}
+                                i \\ f \\ o\\ g \end{array} \right] = \left[...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:149: LaTeX Error: Illegal character in array arg.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.149 ...d{array} \right] = \left[\begin{array}{b}
+                                                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: Citation `seq2seq' on page 6 undefined on input line 156.
+
+
+LaTeX Warning: File `seq2seq0.png' not found on input line 163.
+
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:163: Package pdftex.def Error: File `seq2seq0.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.163 ...egraphics[width=\linewidth]{seq2seq0.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[6]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 167.
+See the caption package documentation for explanation.
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:174: Extra }, or forgotten $.
+l.174 ...(C_i | C_1, C_2, ... C_{i-1}, P; \theta)}
+                                                   $$
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+[7]
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:182: Undefined control sequence.
+l.182 \lable
+            {sec:ptr}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `ptr-net' on page 8 undefined on input line 183.
+
+
+LaTeX Warning: File `ptr0.png' not found on input line 191.
+
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:191: Package pdftex.def Error: File `ptr0.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.191 ...degraphics[width=0.7\linewidth]{ptr0.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 195.
+See the caption package documentation for explanation.
+
+[8]
+
+LaTeX Warning: File `ptr1.png' not found on input line 207.
+
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:207: Package pdftex.def Error: File `ptr1.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.207 ...cludegraphics[width=\linewidth]{ptr1.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 211.
+See the caption package documentation for explanation.
+
+[9]
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:219: Undefined control sequence.
+l.219 \citet
+            {ntm} introduced Neural Turing Machines. The state memory of an RNN
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: File `ntm0.png' not found on input line 228.
+
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:228: Package pdftex.def Error: File `ntm0.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.228 ...cludegraphics[width=\linewidth]{ntm0.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[10]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 232.
+See the caption package documentation for explanation.
+
+[11]
+
+LaTeX Warning: File `ntm2.png' not found on input line 250.
+
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:250: Package pdftex.def Error: File `ntm2.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.250 ...cludegraphics[width=\linewidth]{ntm2.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `ntm3.png' not found on input line 254.
+
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:254: Package pdftex.def Error: File `ntm3.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.254 ...cludegraphics[width=\linewidth]{ntm3.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package caption Warning: \captionsetup{type*=...} or \captionof
+(caption)                outside box or environment on input line 260.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 260.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: File `ntm5.png' not found on input line 269.
+
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:269: Package pdftex.def Error: File `ntm5.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.269 ...cludegraphics[width=\linewidth]{ntm5.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[12]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 273.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: File `ntm6.png' not found on input line 277.
+
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:277: Package pdftex.def Error: File `ntm6.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.277 ...cludegraphics[width=\linewidth]{ntm6.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[13]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 281.
+See the caption package documentation for explanation.
+
+[14]
+
+LaTeX Warning: File `ntm1.png' not found on input line 297.
+
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:297: Package pdftex.def Error: File `ntm1.png' not found.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.297 ...degraphics[width=0.8\linewidth]{ntm1.png}
+                                                  
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 301.
+See the caption package documentation for explanation.
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:304: Undefined control sequence.
+l.304 ...made to the attention mechanism by \citet
+                                                  {dnc}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:306: Undefined control sequence.
+l.306 ...to perform algorithmic operations. \citet
+                                                  {dntm} decoupled
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:308: Undefined control sequence.
+l.308 \citet
+            {ngpu} presented a new architecture called Neural GPU which is a...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[15] [16]
+Chapter 3.
+
+LaTeX Warning: Citation `nco' on page 17 undefined on input line 337.
+
+[17
+
+] [18]
+Chapter 4.
+
+LaTeX Warning: Citation `dnc' on page 19 undefined on input line 352.
+
+
+LaTeX Warning: Reference `sec:ptr' on page 19 undefined on input line 363.
+
+/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:367: Undefined control sequence.
+l.367 \lable
+            {sec:test}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[19
+
+] [20]
+Chapter 5.
+
+LaTeX Warning: Reference `sec:test' on page 21 undefined on input line 404.
+
+
+LaTeX Warning: Citation `nco' on page 21 undefined on input line 405.
+
+(/media/zero/data1/projects/ongoing/rl_car/final_report/report.bbl [21
+
+]
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 411.
+ [22
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 411.
+ (/media/zero/data1/projects/ongoing/rl_car/final_report/report.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 411.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 411.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: BF3010E1FE038D7512FD130A43059C70;1102.
+
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 411.
+ ) 
+Here is how much of TeX's memory you used:
+ 7840 strings out of 493013
+ 118656 string characters out of 6135682
+ 205226 words of memory out of 5000000
+ 11225 multiletter control sequences out of 15000+600000
+ 10619 words of font info for 40 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 36i,7n,39p,295b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on /media/zero/data1/projects/ongoing/rl_car/final_report/report.pdf (25 pages, 326644 bytes).
+PDF statistics:
+ 278 PDF objects out of 1000 (max. 8388607)
+ 235 compressed objects within 3 object streams
+ 57 named destinations out of 1000 (max. 500000)
+ 142 words of extra memory for PDF output out of 10000 (max. 10000000)
+
