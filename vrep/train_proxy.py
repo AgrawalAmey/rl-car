@@ -1,26 +1,28 @@
 import os
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import numpy as np
-from env import RLBot
+from env_proxy import RLBot
 import matplotlib.pyplot as plt
 import pickle
 from keras.models import load_model, Sequential
 from keras.layers import Dense, Activation
 
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
+
 def train():
     env = RLBot()
 
     try:
-        model = load_model('model.hdf5')
+        model = load_model('model_porxy.hdf5')
     except:
         model = Sequential()
-        model.add(Dense(units=10, input_dim=8))
+        model.add(Dense(units=10, input_dim=16))
         model.add(Activation("relu"))
-        model.add(Dense(units=6))
+        model.add(Dense(units=12))
         model.add(Activation("relu"))
         model.add(Dense(units=3))
         model.add(Activation("relu"))
-        model.compile(optimizer='Adam', loss='mse')
+        model.compile(optimizer='Adam', loss='categorical_crossentropy')
 
     # Set learning parameters
     y = .99
@@ -37,8 +39,8 @@ def train():
         # Reset environment and get first new observation
         env.reset()
         s, r = env.step([SPEED, SPEED])
-        s = s['light_sensor'].reshape((1, -1))
-        r = r['light_sensor']
+        s = s['proxy_sensor'].reshape((1, -1))
+        r = r['proxy_sensor']
         Q = model.predict(s)
         a = Q.argmax()
         rAll = 0
@@ -46,7 +48,7 @@ def train():
         loss = 0
         # The Q-Network
         for j in range(num_steps):
-            print("Step {} | State: {} | Action: {} | Reward: {}".format(j, s, a, r))
+            print("Step {} | Action: {} | Reward: {}".format(j, a, r))
             # Choose an action by greedily (with e chance of random action)
             # from the Q-network
             Q = model.predict(s)
@@ -56,7 +58,7 @@ def train():
                 print("e = {}. Choosing Random Action: {}".format(e, a))
             # Get new state and reward from environment
             speed = np.zeros(2)
-            # Q -> left, right, forward, break
+            # Q -> left, right, forward, break, backward
             if a == 0:
                 speed[0] = 0
                 speed[1] = SPEED
@@ -71,8 +73,8 @@ def train():
                 speed[1] = 0
 
             s_, r_ = env.step(speed)
-            s_ = s_['light_sensor'].reshape((1, -1))
-            r_ = r_['light_sensor']
+            s_ = s_['proxy_sensor'].reshape((1, -1))
+            r_ = r_['proxy_sensor']
             # Obtain the Q' values by feeding the new state through our network
             Q_ = model.predict(s_)
             # Obtain maxQ' and set our target value for chosen action.
@@ -96,8 +98,8 @@ def train():
         print("e: " + str(e))
         print("Reward: " + str(rAll))
         pickle.dump({'jList': jList, 'rList': rList, 'lList': lList},
-                    open("history.p", "wb"))
-        model.save('model.hdf5')
+                    open("history_porxy.p", "wb"))
+        model.save('model_proxy.hdf5')
 
     print("Average loss: " + str(sum(lList) / num_episodes))
     print("Average number of steps: " + str(sum(jList) / num_episodes))
@@ -106,6 +108,7 @@ def train():
     plt.plot(rList)
     plt.plot(jList)
     plt.plot(lList)
+
 
 if __name__ == '__main__':
     try:

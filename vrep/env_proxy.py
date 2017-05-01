@@ -62,10 +62,14 @@ class RLBot(object):
 
     def reset(self):
         # Restart the simulation
-        stop = vrep.simxStopSimulation(self.client_id, vrep.simx_opmode_blocking)
-        stop = vrep.simxStopSimulation(self.client_id, vrep.simx_opmode_blocking)
-        start = vrep.simxStartSimulation(self.client_id, vrep.simx_opmode_blocking)
-        start = vrep.simxStartSimulation(self.client_id, vrep.simx_opmode_blocking)
+        stop = vrep.simxStopSimulation(
+            self.client_id, vrep.simx_opmode_blocking)
+        stop = vrep.simxStopSimulation(
+            self.client_id, vrep.simx_opmode_blocking)
+        start = vrep.simxStartSimulation(
+            self.client_id, vrep.simx_opmode_blocking)
+        start = vrep.simxStartSimulation(
+            self.client_id, vrep.simx_opmode_blocking)
         print("Resetting Simulation. Stop Code: {} Start Code: {}".format(stop, start))
 
     def step(self, action):
@@ -104,6 +108,10 @@ class RLBot(object):
         observations['light_sensor'] = np.asarray(observations['light_sensor'])
         observations['light_sensor'] = np.sign(observations['light_sensor'])
 
+        # When nothing is detected a very small value is retured -> changing it to 2
+        observations['proxy_sensor'] = np.asarray(observations['proxy_sensor'])
+        observations['proxy_sensor'][observations['proxy_sensor'] < 0.001] = 2
+
         # Assign reward
         reward = {}
 
@@ -122,12 +130,13 @@ class RLBot(object):
             reward['light_sensor'] = -5
 
         # For proximity sensors
-        reward['proxy_sensor'] = 0
+        reward['proxy_sensor'] = (
+            observations['proxy_sensor'] < 0.7).sum() * -2
+        reward['proxy_sensor'] += (
+            observations['proxy_sensor'] == 0).sum() * -10
 
-
-        # Should be rewarded for quick movement
-        r = np.sum(np.sign(action)) * 2
-        # But no more than 2
+        # Should be rewarded for movement
+        r = np.clip(np.sum(np.absolute(action)) * 2, 0, 2)
 
         reward['light_sensor'] += r
         reward['proxy_sensor'] += r
