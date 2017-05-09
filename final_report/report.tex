@@ -5,7 +5,15 @@
 \usepackage{amsmath}
 \usepackage{algorithm}
 \usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[noend]{algpseudocode}
 
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[chapter] % reset theorem numbering for each chapter
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition} % definition numbers are dependent on theorem numbers
+\newtheorem{exmp}[thm]{Example} % same for example numbers
 
 \def\BState{\State\hskip-\ALG@thistlm}
 
@@ -71,9 +79,73 @@ Through this project we demonstrate the possibility of using deep reinforcement 
 
 \chapter{Algorithm}
 
+\section{Reinforcement Learning}
+
+Reinforcement Learning allows agents to automatically determine the ideal behaviour
+ in order to maximize the performance. Environment provides the reward feedback
+ required by the agent to learn its behaviour.
+
+Markov Decision Process which is a discrete time stochastic control process are
+typically used to model reinforcement learning problems. At each time step, the
+process is in some state $ s $, and the agent may choose any action $ a $ that
+is available in state $ s $ . The process responds at the next time step by
+randomly moving into a new state $ s' $, and giving the agent a
+corresponding reward $ R_{a}(s,s') $.
+
+The probability that the process moves into its new state $ s' $ is
+influenced by the chosen action. Specifically, it is given by the state transition
+function $ P_{a}(s,s') $. Thus, the next state $ s' $
+depends on the current state $ s $ and the agent's action $ a $.
+But given $ s $ and $ a $, it is conditionally independent
+of all previous states and actions; in other words, the state transitions of an
+MDP satisfies the Markov property.
+
+\begin{defn}
+A state $ S_t $ is Markov if and only if,
+$$ P[S_{t+1} | S_t] = P[S_{t+1} | S_1, ..., S_t] $$
+\end{defn}
+
+
+\section{Q-learnings}
+
+Reinforcement learning concerns itself with the long-term reward, not just
+the immediate reward.
+
+The long-term reward is learned when an agent interacts with an environment
+through many trials and errors. An agent remembers the previous actions that
+lead to dead ends. It also remembers the sequence of actions that
+leads it higer rewards.
+
+The value function $ Q $ returns the rewards associated with every state-action pair.
+It is a representation of the long-term reward an agent would receive when
+taking this action at this particular state, followed by taking the best path
+possible afterward.
+
+\begin{defn}
+For a policy $ \pi $, Value function $ Q $ in a state $ s $ is calculated as,
+$$ v_{\pi}(s) = E_{pi}[R_{t+1} + \gamma R_{t+2} + \gamma^2 R_{t+3} + ... | S_t = s] $$
+\end{defn}
+
+Q learning is a model free method where we try to approximate the value function
+using value iteration updates. During each iteration we select the action greedily
+from the learnt value and then update the value function using the actual reward.
+
+\begin{center}
+    \includegraphics[width=\linewidth]{q0.png}
+\end{center}
+
+\begin{center}
+    \includegraphics[width=0.8\linewidth]{q1.png}
+    \captionof{figure}{Illustartion of value iteration methods approching optimal policy.}
+\end{center}
+
 \section{Deep Q-learning}
-In the reinforcement learning literature, Q-learning can be defined as an algorithm which tries to address the credit assignment problem. Basically we have an agent which has to learn to perform a specific task (say, learn to follow a path). The way the algorithm works is that it tries to give a suitable reward (as positive scores) if the bot follows the path, but also gives large penalties (negative scores) if it commits a mistake. Mathematically, the ultimate objective of the agent is to work out in such a way to maximize the reward.
-The robot’s path can be modelled as a Markov Decision Process, where each action (turn, go straight, stop, etc) can be predicted by the algorithm based on the current (say, the current position of the bot) inputs (line sensors). The problem can be modelled as a collection of states and actions, and the bot tries to predict the next action based on the current state. This is done by using the Q learning algorithm. When the same prediction is done using deep neural networks, this is called Deep Q-Learning.
+
+Neural networks can be effectively utilized to approximate the value function.
+Using deep neural networks, value functions of problems with large number of
+possible states can be predicated. Deep Q-learning has been used for solving
+many challenging problem with staggering results.
+
 Here is a pseudocode for the algorithm,
 
 \begin{algorithm}
@@ -98,6 +170,11 @@ Here is a pseudocode for the algorithm,
 The model used to train the simulation environment is three layers deep. All the three layers are dense, fully connected layers. The first layer accepts the raw inputs from the sensors of the bot, which are reshaped into an array of dimensions (1, 20), and then fed into the network. The subsequent hidden layer has neurons according to the task in hand. In a typical case, around 10 neurons work out to be fine. The final layer has neurons equal to the number of actions, which is three in our case.
 
 We use ReLU activations for the input as well as hidden layers and softmax for the output layer. Adam is used as the optimization algorithm with cross-entropy loss.
+
+\begin{center}
+    \includegraphics[width=0.5\linewidth]{net.png}
+    \captionof{figure}{Architecture of used network.}
+\end{center}
 
 \chapter{Simulation} \label{simulation}
 
@@ -128,8 +205,13 @@ Box2D is 2D simulation library in C++ with python bindings named as pybox2D. As 
      \captionof{figure}{Path follwing simulation in Box2D.}
 \end{center}
 
-
 Particularly difficult was attaching ultrasonic sensors in the simulation. As the name suggests, this was a 2D simulation environment. Since our problem statement also included obstacle avoidance, we ultimately had to attach ultrasonic sensors on our simulation model. pybox2D didn't facilitate this very well.
+
+\subsection{Gazebo}
+Gazebo, \cite{gazebo} coupled along with ROS \cite{ros} is a very popular robot simulation software. We tried interfacing Gazebo with OpenAI gym based on \cite{gym-gazebo}, but could not get this getting to work in the first place. The installation procedure was quite cumbersome and required installing and compiling from various different sources. We faced a lot of problems while following the installation procedure, and ultimately decided to search for a different alternative.
+
+\subsection{V-REP}
+V-REP \cite{v-rep} is another simulation software similar to Gazebo, but with much simpler interface and easy integration with a variety of platforms, including python. This was relatively a piece of cake compared to installing Gazebo, and hence our choice when it comes to simulating a model bot. All of the simulation henceforth was carried out using V-REP
 
 \begin{center}
     \includegraphics[width=0.8\linewidth]{2.png}
@@ -140,13 +222,6 @@ Particularly difficult was attaching ultrasonic sensors in the simulation. As th
     \includegraphics[width=0.8\linewidth]{3.png}
      \captionof{figure}{Proximity sensor simulation in V-Rep.}
 \end{center}
-
-
-\subsection{Gazebo}
-Gazebo, \cite{gazebo} coupled along with ROS \cite{ros} is a very popular robot simulation software. We tried interfacing Gazebo with OpenAI gym based on \cite{gym-gazebo}, but could not get this getting to work in the first place. The installation procedure was quite cumbersome and required installing and compiling from various different sources. We faced a lot of problems while following the installation procedure, and ultimately decided to search for a different alternative.
-
-\subsection{V-REP}
-V-REP \cite{v-rep} is another simulation software similar to Gazebo, but with much simpler interface and easy integration with a variety of platforms, including python. This was relatively a piece of cake compared to installing Gazebo, and hence our choice when it comes to simulating a model bot. All of the simulation henceforth was carried out using V-REP
 
 \section{Training}
 
@@ -169,6 +244,35 @@ The following major components were used in the physical model of the bot.
  \item 9V Power Adapter
  \item Raspberry Pi (Model B)
 \end{itemize}
+
+This trained model was then used to run the physical model as described in \autoref{testing-pretrained-models}
+
+\chapter{Physical Model}
+The aim of this project was also to demonstrate the use of the algorithm in the real world. To serve this purpose, we built a physical model of a mobile robot using readily available components.
+
+\section{Components}
+The following major components were used in the physical model of the bot. Any relevant specifications are also listed below.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{0.7\linewidth}|p{0.3\linewidth}|}
+\hline
+ Acrylic Chassis & 2 Wheel Drive \\ \hline
+ IR Sensor Array & 8 Channel \\ \hline
+ LM293D Motor Driver board & 7805 Power Supply \\ \hline
+ Ultrasonic Range Finder Modules & 4 \\ \hline
+ Power Adapter & 9V \\ \hline
+ Raspberry Pi & Model B (2014)\\ \hline
+ Breadboard & 1 \\ \hline
+ Jumper Wires & 20 \\ \hline
+\end{tabular}
+\caption{Components}
+\end{table}
+
+\begin{figure}
+    \includegraphics[width=\textwidth]{block-diagram}
+    \caption{Block Diagram of one iteration of the control loop}
+\end{figure}
 
 \section{The Microcontroller}
 Both, the Raspberry Pi and the Arduino could be used as the microcontroller for the bot. But since the Raspberry Pi runs Python out of the box, it was the obvious choice when it comes to machine learning. Also, libraries such as TensorFlow are specially designed to run on Raspberry Pi.

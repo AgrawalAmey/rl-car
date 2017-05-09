@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.10)  2 MAY 2017 16:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2017.2.10)  9 MAY 2017 19:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -295,36 +295,67 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/media/zero/data1/projects/ongoing/rl_car/final_report/report.aux)
+)) (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks23
+\thm@bodyfont=\toks24
+\thm@headfont=\toks25
+\thm@notefont=\toks26
+\thm@headpunct=\toks27
+\thm@preskip=\skip49
+\thm@postskip=\skip50
+\thm@headsep=\skip51
+\dth@everypar=\toks28
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+ (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count123
+\c@ALG@rem=\count124
+\c@ALG@nested=\count125
+\ALG@tlm=\skip52
+\ALG@thistlm=\skip53
+\c@ALG@Lnr=\count126
+\c@ALG@blocknr=\count127
+\c@ALG@storecount=\count128
+\c@ALG@tmpcounter=\count129
+\ALG@tmplength=\skip54
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+)
+\c@thm=\count130
+ (/media/zero/data1/projects/ongoing/rl_car/final_report/report.aux)
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count123
+\scratchcounter=\count131
 \scratchdimen=\dimen135
 \scratchbox=\box56
-\nofMPsegments=\count124
-\nofMParguments=\count125
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count126
+\nofMPsegments=\count132
+\nofMParguments=\count133
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count134
 \MPscratchDim=\dimen136
-\MPnumerator=\count127
-\makeMPintoPDFobject=\count128
-\everyMPtoPDFconversion=\toks24
+\MPnumerator=\count135
+\makeMPintoPDFobject=\count136
+\everyMPtoPDFconversion=\toks30
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -342,25 +373,25 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box57
-Package hyperref Info: Link coloring OFF on input line 12.
+Package hyperref Info: Link coloring OFF on input line 20.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count129
+\c@section@level=\count137
 )
-LaTeX Info: Redefining \ref on input line 12.
-LaTeX Info: Redefining \pageref on input line 12.
-LaTeX Info: Redefining \nameref on input line 12.
+LaTeX Info: Redefining \ref on input line 20.
+LaTeX Info: Redefining \pageref on input line 20.
+LaTeX Info: Redefining \nameref on input line 20.
  (/media/zero/data1/projects/ongoing/rl_car/final_report/report.out) (/media/zero/data1/projects/ongoing/rl_car/final_report/report.out)
 \@outlinefile=\write3
 \openout3 = `report.out'.
 
- <logo.png, id=92, 1027.84pt x 1027.84pt>
+ <logo.png, id=108, 1027.84pt x 1027.84pt>
 File: logo.png Graphic file (type png)
  <use logo.png>
-Package pdftex.def Info: logo.png used on input line 36.
+Package pdftex.def Info: logo.png used on input line 44.
 (pdftex.def)             Requested size: 155.99762pt x 155.98863pt.
  [1
 
@@ -372,222 +403,127 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Try loading font information for U+msb on input line 3.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.25 ...\numberline {6}Conclusions}{21}{chapter.6}
+                                                   [1
+
+])
 \tf@toc=\write4
 \openout4 = `report.toc'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.56 \chapter
-             {Introduction} [1
-
-]
+ [2]
 Chapter 1.
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
-[2
+[3
 
-] [3]
+] [4]
 Chapter 2.
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 80.
+[5
 
-/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:81: LaTeX Error: Environment algorithmic undefined.
+] <q0.png, id=176, 1308.89pt x 168.63pt>
+File: q0.png Graphic file (type png)
+ <use q0.png>
+Package pdftex.def Info: q0.png used on input line 134.
+(pdftex.def)             Requested size: 390.0pt x 50.24458pt.
+ <q1.png, id=177, 631.35875pt x 386.44376pt>
+File: q1.png Graphic file (type png)
+ <use q1.png>
+Package pdftex.def Info: q1.png used on input line 138.
+(pdftex.def)             Requested size: 312.00119pt x 190.96887pt.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.81  \begin{algorithmic}
-                         [1]
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 
-/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:82: Undefined control sequence.
-l.82   \State
-              Initialize action-value function Q with random weights
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 139.
+See the caption package documentation for explanation.
 
-/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:83: Undefined control sequence.
-l.83   \State
-              Observe initial state s
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:84: Undefined control sequence.
-l.84   \For
-            {episode = 1, M}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:85: Undefined control sequence.
-l.85   \For
-            {steps = 1, T}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:86: Undefined control sequence.
-l.86   \State
-              With probability select a random action $ a_t $
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:87: Undefined control sequence.
-l.87   \State
-              Otherwise select $ a_t = max_a Q âˆ— (\phi(s_t), a, \theta) $
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
+[6 </media/zero/data1/projects/ongoing/rl_car/final_report/q0.png> </media/zero/data1/projects/ongoing/rl_car/final_report/q1.png>]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 152.
 Missing character: There is no â in font cmr12!
 Missing character: There is no ˆ in font cmr12!
 Missing character: There is no — in font cmr12!
-/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:88: Undefined control sequence.
-l.88   \State
-              Execute action in emulator and observe reward $ r_t $ and imag...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:89: Undefined control sequence.
-l.89   \State
-              Set $ s_{t+1} = s_t, a_t, x_{t+1} $ and preprocess $ \phi_{t+1...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:90: Undefined control sequence.
-l.90   \State
-              $ y_j = r_j + \gamma max_{a'} Q(\phi_{j+1}, a'; \theta) $
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:91: Undefined control sequence.
-l.91   \State
-              Perform a gradient descent step on $ (y_j - Q(\phi_j , a_j ; \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:92: Undefined control sequence.
-l.92   \EndFor
-              
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:93: Undefined control sequence.
-l.93   \EndFor
-              
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+ <net.png, id=184, 416.55624pt x 293.095pt>
+File: net.png Graphic file (type png)
+ <use net.png>
+Package pdftex.def Info: net.png used on input line 175.
+(pdftex.def)             Requested size: 195.0pt x 137.20457pt.
 
 
-/media/zero/data1/projects/ongoing/rl_car/final_report/report.tex:94: LaTeX Error: \begin{algorithm} on input line 79 ended by \end{algorithmic}.
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 176.
+See the caption package documentation for explanation.
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.94  \end{algorithmic}
-                       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[4
-
-] [5]
+[7] [8 </media/zero/data1/projects/ongoing/rl_car/final_report/net.png>]
 Chapter 3.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 111.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 188.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 111.
- [6
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 188.
+ [9
 
-] <1.png, id=162, 1205.50375pt x 1004.75375pt>
+] <1.png, id=203, 1205.50375pt x 1004.75375pt>
 File: 1.png Graphic file (type png)
  <use 1.png>
-Package pdftex.def Info: 1.png used on input line 127.
+Package pdftex.def Info: 1.png used on input line 204.
 (pdftex.def)             Requested size: 312.00119pt x 260.03398pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 128.
+(caption)                particular \caption on input line 205.
 See the caption package documentation for explanation.
 
-[7 </media/zero/data1/projects/ongoing/rl_car/final_report/1.png>] <2.png, id=169, 1332.98pt x 928.46875pt>
+[10 </media/zero/data1/projects/ongoing/rl_car/final_report/1.png>] <2.png, id=213, 1332.98pt x 928.46875pt>
 File: 2.png Graphic file (type png)
  <use 2.png>
-Package pdftex.def Info: 2.png used on input line 135.
+Package pdftex.def Info: 2.png used on input line 217.
 (pdftex.def)             Requested size: 312.00119pt x 217.31181pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 136.
+(caption)                particular \caption on input line 218.
 See the caption package documentation for explanation.
 
-<3.png, id=170, 1629.08624pt x 931.48pt>
+[11] <3.png, id=222, 1629.08624pt x 931.48pt>
 File: 3.png Graphic file (type png)
  <use 3.png>
-Package pdftex.def Info: 3.png used on input line 140.
+Package pdftex.def Info: 3.png used on input line 222.
 (pdftex.def)             Requested size: 312.00119pt x 178.39014pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 141.
+(caption)                particular \caption on input line 223.
 See the caption package documentation for explanation.
 
-[8 </media/zero/data1/projects/ongoing/rl_car/final_report/2.png> </media/zero/data1/projects/ongoing/rl_car/final_report/3.png>] [9]
+[12 </media/zero/data1/projects/ongoing/rl_car/final_report/2.png> </media/zero/data1/projects/ongoing/rl_car/final_report/3.png>] [13]
 Chapter 4.
-[10
-
-] [11] [12] [13]
-Chapter 5.
 [14
 
 ]
+Chapter 5.
+
+Overfull \hbox (24.0pt too wide) in paragraph at lines 258--269
+ [][] 
+ []
+
+<block-diagram.png, id=240, 1192.455pt x 1275.76625pt>
+File: block-diagram.png Graphic file (type png)
+ <use block-diagram.png>
+Package pdftex.def Info: block-diagram.png used on input line 273.
+(pdftex.def)             Requested size: 390.0pt x 417.24712pt.
+ [15
+
+] [16 </media/zero/data1/projects/ongoing/rl_car/final_report/block-diagram.png>] [17] [18] [19] [20]
 Chapter 6.
-(/media/zero/data1/projects/ongoing/rl_car/final_report/report.bbl [15
+[21
+
+]
+Chapter 7.
+(/media/zero/data1/projects/ongoing/rl_car/final_report/report.bbl [22
 
 ]
 Underfull \hbox (badness 7613) in paragraph at lines 4--8
@@ -600,31 +536,31 @@ Underfull \hbox (badness 2884) in paragraph at lines 10--15
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 249.
- [16
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 353.
+ [23
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 249.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 353.
  (/media/zero/data1/projects/ongoing/rl_car/final_report/report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 249.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 249.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 353.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 353.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: A36169BC83CFB70D79A43A14066C92B0;1299.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 249.
+(rerunfilecheck)             Checksum: F726DA5549AB52EC5CF8070CE778E50F;1533.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 353.
  ) 
 Here is how much of TeX's memory you used:
- 7406 strings out of 493013
- 112561 string characters out of 6135682
- 199033 words of memory out of 5000000
- 10809 multiletter control sequences out of 15000+600000
+ 7991 strings out of 493013
+ 120746 string characters out of 6135682
+ 208906 words of memory out of 5000000
+ 11362 multiletter control sequences out of 15000+600000
  10925 words of font info for 41 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,5n,39p,554b,356s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on /media/zero/data1/projects/ongoing/rl_car/final_report/report.pdf (17 pages, 2999087 bytes).
+ 36i,9n,39p,554b,502s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on /media/zero/data1/projects/ongoing/rl_car/final_report/report.pdf (24 pages, 3116931 bytes).
 PDF statistics:
- 279 PDF objects out of 1000 (max. 8388607)
- 242 compressed objects within 3 object streams
- 51 named destinations out of 1000 (max. 500000)
- 197 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 347 PDF objects out of 1000 (max. 8388607)
+ 297 compressed objects within 3 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 249 words of extra memory for PDF output out of 10000 (max. 10000000)
 

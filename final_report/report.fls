@@ -78,6 +78,12 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
 INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/report.aux
 INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/report.aux
 OUTPUT /media/zero/data1/projects/ongoing/rl_car/final_report/report.aux
@@ -135,6 +141,15 @@ OUTPUT /media/zero/data1/projects/ongoing/rl_car/final_report/report.toc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/q0.png
+INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/q0.png
+INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/q0.png
+INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/q1.png
+INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/q1.png
+INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/q1.png
+INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/net.png
+INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/net.png
+INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/net.png
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
@@ -148,6 +163,9 @@ INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/2.png
 INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/3.png
 INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/3.png
 INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/3.png
+INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/block-diagram.png
+INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/block-diagram.png
+INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/block-diagram.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
 INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/report.bbl
 INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/report.bbl
@@ -157,6 +175,7 @@ INPUT /media/zero/data1/projects/ongoing/rl_car/final_report/report.out
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb

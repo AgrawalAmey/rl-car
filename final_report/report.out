@@ -1,22 +1,26 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
 \BOOKMARK [0][-]{chapter.2}{Algorithm}{}% 2
-\BOOKMARK [1][-]{section.2.1}{Deep Q-learning}{chapter.2}% 3
-\BOOKMARK [1][-]{section.2.2}{Neural Network Architecture}{chapter.2}% 4
-\BOOKMARK [0][-]{chapter.3}{Simulation}{}% 5
-\BOOKMARK [1][-]{section.3.1}{The Need for Simulation}{chapter.3}% 6
-\BOOKMARK [1][-]{section.3.2}{Simulation Techniques}{chapter.3}% 7
-\BOOKMARK [2][-]{subsection.3.2.1}{BOX2D}{section.3.2}% 8
-\BOOKMARK [2][-]{subsection.3.2.2}{Gazebo}{section.3.2}% 9
-\BOOKMARK [2][-]{subsection.3.2.3}{V-REP}{section.3.2}% 10
-\BOOKMARK [1][-]{section.3.3}{Training}{chapter.3}% 11
-\BOOKMARK [0][-]{chapter.4}{Physical Model}{}% 12
-\BOOKMARK [1][-]{section.4.1}{Components}{chapter.4}% 13
-\BOOKMARK [1][-]{section.4.2}{The Microcontroller}{chapter.4}% 14
-\BOOKMARK [1][-]{section.4.3}{Networking and Communications}{chapter.4}% 15
-\BOOKMARK [2][-]{subsection.4.3.1}{ZeroMQ}{section.4.3}% 16
-\BOOKMARK [2][-]{subsection.4.3.2}{Flask}{section.4.3}% 17
-\BOOKMARK [1][-]{section.4.4}{Power}{chapter.4}% 18
-\BOOKMARK [1][-]{section.4.5}{Testing Pretrained Models}{chapter.4}% 19
-\BOOKMARK [1][-]{section.4.6}{Training Physical Model}{chapter.4}% 20
-\BOOKMARK [0][-]{chapter.5}{Conclusions}{}% 21
-\BOOKMARK [0][-]{chapter.6}{Future Directions}{}% 22
+\BOOKMARK [1][-]{section.2.1}{Reinforcement Learning}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Q-learnings}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.3}{Deep Q-learning}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.4}{Neural Network Architecture}{chapter.2}% 6
+\BOOKMARK [0][-]{chapter.3}{Simulation}{}% 7
+\BOOKMARK [1][-]{section.3.1}{The Need for Simulation}{chapter.3}% 8
+\BOOKMARK [1][-]{section.3.2}{Simulation Techniques}{chapter.3}% 9
+\BOOKMARK [2][-]{subsection.3.2.1}{BOX2D}{section.3.2}% 10
+\BOOKMARK [2][-]{subsection.3.2.2}{Gazebo}{section.3.2}% 11
+\BOOKMARK [2][-]{subsection.3.2.3}{V-REP}{section.3.2}% 12
+\BOOKMARK [1][-]{section.3.3}{Training}{chapter.3}% 13
+\BOOKMARK [0][-]{chapter.4}{Physical Model}{}% 14
+\BOOKMARK [1][-]{section.4.1}{Components}{chapter.4}% 15
+\BOOKMARK [0][-]{chapter.5}{Physical Model}{}% 16
+\BOOKMARK [1][-]{section.5.1}{Components}{chapter.5}% 17
+\BOOKMARK [1][-]{section.5.2}{The Microcontroller}{chapter.5}% 18
+\BOOKMARK [1][-]{section.5.3}{Networking and Communications}{chapter.5}% 19
+\BOOKMARK [2][-]{subsection.5.3.1}{ZeroMQ}{section.5.3}% 20
+\BOOKMARK [2][-]{subsection.5.3.2}{Flask}{section.5.3}% 21
+\BOOKMARK [1][-]{section.5.4}{Power}{chapter.5}% 22
+\BOOKMARK [1][-]{section.5.5}{Testing Pretrained Models}{chapter.5}% 23
+\BOOKMARK [1][-]{section.5.6}{Training Physical Model}{chapter.5}% 24
+\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 25
+\BOOKMARK [0][-]{chapter.7}{Future Directions}{}% 26
