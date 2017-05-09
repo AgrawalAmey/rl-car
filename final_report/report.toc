@@ -1,22 +1,22 @@
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}
-\contentsline {chapter}{\numberline {2}Background}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Reccurent Neural Networks}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Long Short Term Memory (LSTM)}{5}{section.2.2}
-\contentsline {section}{\numberline {2.3}Sequance to sequence learning}{6}{section.2.3}
-\contentsline {section}{\numberline {2.4}Pointer Networks}{8}{section.2.4}
-\contentsline {section}{\numberline {2.5}Neural Turing Machines}{10}{section.2.5}
-\contentsline {chapter}{\numberline {3}Combinatorial Optimization Problems}{17}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introduction}{17}{section.3.1}
-\contentsline {section}{\numberline {3.2}Complexity Class}{17}{section.3.2}
-\contentsline {section}{\numberline {3.3}Neural Combinatorial Optimization}{18}{section.3.3}
-\contentsline {chapter}{\numberline {4}Neural Turing Machines With Input Pointers}{19}{chapter.4}
-\contentsline {section}{\numberline {4.1}Motivation}{19}{section.4.1}
-\contentsline {section}{\numberline {4.2}Algorithum}{19}{section.4.2}
-\contentsline {section}{\numberline {4.3}Standard Testbench}{19}{section.4.3}
-\contentsline {subsubsection}{Copy}{20}{section*.2}
-\contentsline {subsubsection}{Repeat Copy}{20}{section*.3}
-\contentsline {subsubsection}{Travelling Salesman Problem}{20}{section*.4}
-\contentsline {section}{\numberline {4.4}Implementation}{20}{section.4.4}
-\contentsline {subsubsection}{Keras}{20}{section*.5}
-\contentsline {subsubsection}{Pytorch}{20}{section*.6}
-\contentsline {chapter}{\numberline {5}Conclusion and Furthur Direction}{21}{chapter.5}
+\contentsline {chapter}{\numberline {2}Algorithm}{4}{chapter.2}
+\contentsline {section}{\numberline {2.1}Deep Q-learning}{4}{section.2.1}
+\contentsline {section}{\numberline {2.2}Neural Network Architecture}{4}{section.2.2}
+\contentsline {chapter}{\numberline {3}Simulation}{6}{chapter.3}
+\contentsline {section}{\numberline {3.1}The Need for Simulation}{6}{section.3.1}
+\contentsline {section}{\numberline {3.2}Simulation Techniques}{7}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}BOX2D}{7}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Gazebo}{9}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}V-REP}{9}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Training}{9}{section.3.3}
+\contentsline {chapter}{\numberline {4}Physical Model}{10}{chapter.4}
+\contentsline {section}{\numberline {4.1}Components}{10}{section.4.1}
+\contentsline {section}{\numberline {4.2}The Microcontroller}{10}{section.4.2}
+\contentsline {section}{\numberline {4.3}Networking and Communications}{11}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}ZeroMQ}{11}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Flask}{11}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Power}{12}{section.4.4}
+\contentsline {section}{\numberline {4.5}Testing Pretrained Models}{12}{section.4.5}
+\contentsline {section}{\numberline {4.6}Training Physical Model}{12}{section.4.6}
+\contentsline {chapter}{\numberline {5}Conclusions}{14}{chapter.5}
+\contentsline {chapter}{\numberline {6}Future Directions}{15}{chapter.6}
