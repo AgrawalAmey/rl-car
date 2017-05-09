@@ -30,16 +30,17 @@
    2014A7PS148P
   \end{multicols}
 
-  \vspace{1cm}
+  \vspace{2cm}
 
   \includegraphics[width=0.4\textwidth]{logo}
-  \vspace{1cm}
+
+  \vspace{2cm}
 
   Birla Institute of Technology and Science, Pilani\\
   \vspace{0.5cm}
-  Final Report submitted in the fulfillment of the course\\
+  Final report submitted in the fulfillment of the course\\
   \textbf{EEE/CS F491 Special Project}\\
-  Under the Supervision of\\
+  Under the supervision of\\
   \textbf{Prof. Surekha Bhanot}\\
   \vspace{0.5cm}
   \today
@@ -52,7 +53,6 @@
 \tableofcontents
 
 \chapter{Introduction}
-
 
 Humans have forever wanted to make autonomous systems capable of making intelligent decisions on their own. The recent advancements in AI year after year are moving us closer to realizing this dream. This project is an attempt to convert these pioneering ideas into real world applications, making the world a better place.
 
@@ -71,22 +71,21 @@ Through this project we demonstrate the possibility of using deep reinforcement 
 \chapter{Algorithm}
 
 \section{Deep Q-learning}
-
 In the reinforcement learning literature, Q-learning can be defined as an algorithm which tries to address the credit assignment problem. Basically we have an agent which has to learn to perform a specific task (say, learn to follow a path). The way the algorithm works is that it tries to give a suitable reward (as positive scores) if the bot follows the path, but also gives large penalties (negative scores) if it commits a mistake. Mathematically, the ultimate objective of the agent is to work out in such a way to maximize the reward.
 The robot’s path can be modelled as a Markov Decision Process, where each action (turn, go straight, stop, etc) can be predicted by the algorithm based on the current (say, the current position of the bot) inputs (line sensors). The problem can be modelled as a collection of states and actions, and the bot tries to predict the next action based on the current state. This is done by using the Q learning algorithm. When the same prediction is done using deep neural networks, this is called Deep Q-Learning.
 Here is a pseudocode for the algorithm,
 
 \begin{algorithm}
- \caption{Deep Q-learning}\label{euclid}
+ \caption{Deep Q-learning}\label{q-learning}
  \begin{algorithmic}[1]
   \State Initialize action-value function Q with random weights
   \State Observe initial state s
   \For {episode = 1, M}
   \For {steps = 1, T}
-  \State With probability select a random action $ a_t $
+  \State With probability select a random action $ a_t $
   \State Otherwise select $ a_t = max_a Q ∗ (\phi(s_t), a, \theta) $
-  \State Execute action at in emulator and observe reward $ r_t $ and image $ x_{t+1} $
-  \State $ Set s_{t+1} = s_t, a_t, x_{t+1} $ and preprocess $ \phi_{t+1} = \phi(st+1) $
+  \State Execute action in emulator and observe reward $ r_t $ and image $ x_{t+1} $
+  \State Set $ s_{t+1} = s_t, a_t, x_{t+1} $ and preprocess $ \phi_{t+1} = \phi(st+1) $
   \State $ y_j = r_j + \gamma max_{a'} Q(\phi_{j+1}, a'; \theta) $
   \State Perform a gradient descent step on $ (y_j - Q(\phi_j , a_j ; \theta))^2 $
   \EndFor
@@ -95,26 +94,13 @@ Here is a pseudocode for the algorithm,
 \end{algorithm}
 
 \section{Neural Network Architecture}
+The model used to train the simulation environment is three layers deep. All the three layers are dense, fully connected layers. The first layer accepts the raw inputs from the sensors of the bot, which are reshaped into an array of dimensions (1, 20), and then fed into the network. The subsequent hidden layer has neurons according to the task in hand. In a typical case, around 10 neurons work out to be fine. The final layer has neurons equal to the number of actions, which is three in our case.
 
-We use a four layer deep multi-layer perceptron model. With ReLU activation for
-the input and hidden layers while softmax is applied on the output later.
+We use ReLU activations for the input as well as hidden layers and softmax for the output layer. Adam is used as the optimization algorithm with cross-entropy loss.
 
-The number of units in layers are set according to the task to be performed.
-Adam is used for backpropogation with cross-entropy loss.
+\chapter{Simulation} \label{simulation}
 
-\chapter{Experimental Setup}
-
-\section{Tasks}
-
-\subsection{Path follow}
-Path following has been sucessfully trid on many video games using deep
-reinforcement learning. But all of them take the
-We trained an agent with with IR sensor array to
-
-\section{Simulation} \label{ch:simulation}
-
-\subsection{The Need for Simulation}
-
+\section{The Need for Simulation} \label{need-for-simulation}
 When a agent learns to perform actions using reinforcement learning, it
 needs to interact with the environment. Though in principle it could
 done using a physical robot, training a neural network on a physical bot posed
@@ -122,7 +108,7 @@ a lot of challenges.
 
 \begin{itemize}
  \item The bot had to be placed on its starting position after every training episode. With more than 500 episodes to train, this would be cumbersome and impractical.
- \item Because of the minimum speed discussed in \autoref{sec:testpretrainedmodels}, the bot would often run out of track, collide with barriers, or move in a random fashion. This should be avoided during training. In any such case, say, running out of the track, the bot can only return to the track by chance. The sensors would be ineffective, so there's no point in continuing that episode.
+ \item Because of the minimum speed discussed in \autoref{testing-pretrained-models}, the bot would often run out of track, collide with barriers, or move in a random fashion. This should be avoided during training. In any such case, say, running out of the track, the bot can only return to the track by chance. The sensors would be ineffective, so there's no point in continuing that episode.
  \item Once the bot moved out of the chart paper on which the actual track was inscribed, it would receive abrupt inputs because of the rough surface beyond the chart paper. This would further hamper the learning process.
  \item In case of any of the above incidents, stopping the iteration manually involved a lot of latency. This uncertainity is not desired in the training process.
 \end{itemize}
@@ -130,58 +116,86 @@ a lot of challenges.
 Hence, real-like simulations are essential to train and expirement with
 algorithums. The simulation techniques we employed are discribed bellow.
 
-\subsection{Simulation Techniques}
+\section{Simulation Techniques}
+We used OpenAI gym as our primary interface the learning algorithm with the simulation envinorment. Initially we developed 2D simulations in Box2D and later a more robust system was developed using V-Rep.
 
-We used OpenAI gym as our primary interface the learning algorithm with the
-simulation envinorment. Initially we developed 2D simulations in Box2D and
-later a more rhobust system was developed using V-Rep.
+\subsection{BOX2D}
+Box2D is 2D simulation library in C++ with python bindings named as pybox2D. As pybox2D is part of the original OpenAI gym simulation environments, we developed a simulation for path follwing using OpenAI gym and pybox2D. This idea had a few major shortcomings which led to further improvisations and ultimately chucking the whole idea of pybox2D.
 
-\subsubsection{BOX2D}
-Box2D is 2D simulation library in C++ with python bindings named as pybox2D.
-As pybox2D is part of the original OpenAI gym simulation environments.
-We developed a simulation for path follwing using
+Particularly difficult was attaching ultrasonic sensors in the simulation. As the name suggests, this was a 2D simulation environment. Since our problem statement also included obstacle avoidance, we ultimately had to attach ultrasonic sensors on our simulation model. pybox2D didn't facilitate this very well.
 
+\subsection{Gazebo}
+Gazebo, \cite{gazebo} coupled along with ROS \cite{ros} is a very popular robot simulation software. We tried interfacing Gazebo with OpenAI gym based on \cite{gym-gazebo}, but could not get this getting to work in the first place. The installation procedure was quite cumbersome and required installing and compiling from various different sources. We faced a lot of problems while following the installation procedure, and ultimately decided to search for a different alternative.
 
-\subsubsection{V-REP}
+\subsection{V-REP}
+V-REP \cite{v-rep} is another simulation software similar to Gazebo, but with much simpler interface and easy integration with a variety of platforms, including python. This was relatively a piece of cake compared to installing Gazebo, and hence our choice when it comes to simulating a model bot. All of the simulation henceforth was carried out using V-REP
 
+\section{Training}
 
-\section{Physical Simulation}
+We used the already existing Pioneer 3DX model for our simulations. We first developed an interfacing script similar to OpenAI gym which lets us control the actual simulation from a python script. Next, we implemented the deep Q learning algorithm using keras with TensorFlow backend.
 
+The training took well over 150 episodes with about 500 steps in each episode. The whole process took around 5 hours to complete. Initially the number of steps were limited to 100 to prevent the bot from exploring the track for the rest of the timesteps. This was then gradually increased as the bot started to learn in the initial few episodes.
 
+This trained model was then used to run the physical model as described in \autoref{testing-pretrained-models}
+
+\chapter{Physical Model}
 The aim of this project was also to demonstrate the use of the algorithm in the real world. To serve this purpose, we built a physical model of a mobile robot using readily available components.
 
-\subsection{Components}
-The following major components were used in the physical model of the bot.
-\begin{itemize}
- \item Acrylic Chassis with 2 Wheel Drive
- \item 8 Channel IR Sensor Array
- \item LM293D Motor Driver board with 7805 Power Supply
- \item 4 Ultrasonic Range Finder Modules
- \item 9V Power Adapter
- \item Raspberry Pi (Model B)
-\end{itemize}
+\section{Components}
+The following major components were used in the physical model of the bot. Any relevant specifications are also listed below.
 
-\subsection{The Microcontroller}
+\begin{table}[h]
+\centering
+\begin{tabular}{|p{0.7\linewidth}|p{0.3\linewidth}|}
+\hline
+ Acrylic Chassis & 2 Wheel Drive \\ \hline
+ IR Sensor Array & 8 Channel \\ \hline
+ LM293D Motor Driver board & 7805 Power Supply \\ \hline
+ Ultrasonic Range Finder Modules & 4 \\ \hline
+ Power Adapter & 9V \\ \hline
+ Raspberry Pi & Model B (2014)\\ \hline
+ Breadboard & 1 \\ \hline
+ Jumper Wires & 20 \\ \hline
+\end{tabular}
+\caption{Components}
+\end{table}
+
+\begin{figure}
+    \includegraphics[width=\textwidth]{block-diagram}
+    \caption{Block Diagram of one iteration of the control loop}
+\end{figure}
+
+\section{The Microcontroller}
 Both, the Raspberry Pi and the Arduino could be used as the microcontroller for the bot. But since the Raspberry Pi runs Python out of the box, it was the obvious choice when it comes to machine learning. Also, libraries such as TensorFlow are specially designed to run on Raspberry Pi.
 
 It turns out that we eventually performed all the learning and decision making on a computer, with the Pi only serving as an interface to control the bot. In such a scenario, the Arduino would work equally well, except the fact that it would need another means of communication than described below.
 
-\subsection{Networking and Communications}
+\section{Networking and Communications}
 The Raspberry Pi on the bot was connected to a home WiFi network using an external WiFi adapter. Our computer was also connected to the same network.
 An SSH server was enabled on the Pi which allowed accessing it remotely from the computer. All of the programs were uploaded using SSH.
 
-Testing pretrained models trained in \autoref{ch:simulation} on the bot had its own issues. The python script on the computer needed to communicate with the bot in order to get sensor values. We needed some form of interprocess communication, which was not possible natively using SSH.
+Testing pretrained models trained in \autoref{simulation} on the bot had its own issues. The python script on the computer needed to communicate with the bot in order to get sensor values. We needed some form of interprocess communication, which was not possible natively using SSH.
 
-\subsubsection{ZeroMQ}
+\subsection{ZeroMQ}
 We tried out ZeroMQ, the distributed messaging library. Although we were able to exchange close to 400 messages per second, we later realized that we also needed to provide the bot with actions computed by the network. This posed a problem because ZeroMQ uses a blocking queue. The communications would freeze very often on the occasion of frequent deadlocks.
 
-\subsubsection{Flask}
+\subsection{Flask}
 HTTP was the next best available mode of communication and \texttt{Flask} was the next best tool for the purpose. Being lightweight, it did not hamper connection speed. Also, it runs quite well on the RPi. Since HTTP was built to support multiple channels and because it was non blocking, this solution worked quite well.
 
 So we set up a \texttt{Flask} server on the RPi and used the \texttt{requests} package to send \texttt{POST} requests on the Flask server with actions, which, in turn, would return the observations of the sensors.
 
-\subsection{Testing Pretrained Models} \label{sec:testpretrainedmodels}
-For the few experiments we performed while testing the pretrained models trained in \autoref{ch:simulation}, the results suggested a few changes that needed to be made before achieving decent results. The following challenges were faced.
+\section{Power}
+
+The Raspberry Pi requires around 5V, which is a feeble amount of power and can easily be provided through USB devices. To facilitate portability, a USB Power Bank was used.
+
+The motors, however, are a different story. Each of the motors had a specified power rating of 9V, 600mA, which cannot be powered from the same USB power source as that for the Pi. Thus, the motors required a different power source.
+
+We initially tried powering with a standard 9V battery only to find out that it lasts only a few hours. In case the bot required training, this would be a terrible idea.
+
+At last, we decided to use an external power adapter which converts utility power to 9V DC. This setup worked well for all experiments.
+
+\section{Testing Pretrained Models} \label{testing-pretrained-models}
+For the few experiments we performed while testing the pretrained models trained in \autoref{simulation}, the results suggested a few changes that needed to be made before achieving decent results. The following challenges were faced.
 
 \begin{itemize}
  \item There was a considerable difference in the size of the actual track and the track used while simulation. We did not take into account this fact while making the simulation.
@@ -189,7 +203,40 @@ For the few experiments we performed while testing the pretrained models trained
  \item The actual bot was considerably heavy and the motors didn't provide enough torque to move the bot at lower speeds. This resulted in a \emph{minimum speed} of the bot, below which it refulsed to move.
 \end{itemize}
 
-\subsection{Training Physical Model}
+\section{Training Physical Model}
+
+We wanted to avoid training a physical model at all costs due to reasons listed in \autoref{need-for-simulation}, but due to the unexpected outcomes in \autoref{testing-pretrained-models}, we tried this anyway. The following observations prove why training an actual model is a really terrible idea.
+
+\begin{itemize}
+    \item There was a mismatch of scale of the simulated model and the actual bot. In theory, we could run the bot at whatsoever speed we want provided it is between the operating limits, but it turns out that the sheer weight of the bot combined with a portable power source was large enough to create a minimum barrier speed that the bot could achieve. This \emph{minimum speed} was faster than actually required for efficient training. We eventually had to remove the portable power source and replace it with a wired one.
+    \item In the initial phase of training, the bot is biased about the actions it needs to take. Since we had four actions, all of them were equally probable. During our experiments, the bot almost chose to take left turns, which led to the different cords (introduced due to excessive weight) being used to tangle. In only one minute of training, the process had to be stopped for this very reason.
+    \item The bias for a particular action was further reinforced when the bot actually got positive rewards when it reached the end of the track and could not move. This was clearly not desired, and further justified the need for simulation.
+    \item The reward function was then modified and made biased to give better rewards to move forward, but this in turn made learning other actions really difficult.
+\end{itemize}
+
+All of these practical difficulties further testify the requirement of simulations. Reinforcement learning problems on physical models are better done through transfer learning with better choice of simulation parameters as to match with the physical implementation of the physical model.
+
+\chapter{Conclusions}
+In this project, we aimed to test out the recently popular reinforcement learning paradigm which can be easily adapted to tasks like robot locomotion. This project led to the following conclusions.
+
+\begin{itemize}
+    \item We were successful in implementing the Q learning algorithm in simulation, which was able to train in a relatively short span of around 150 episodes. This further strengthens the applicability of reinforcement learning to such tasks, and shows that we are headed in the right direction.
+    \item We developed an interface to the popular Pioneer 3DX bot available for V-REP. The bot can now be fully controlled via python. This is an added contribution to the open source community.
+    \item We discovered that algorithms such as reinforcement learning which require training for extended periods have to be accompanied by simulation. Performing the training process on an actual bot poses a lot of challenges.
+
+\end{itemize}
+
+\chapter{Future Directions}
+
+The original idea of the project was to develop an algorithm for autonomous robots in a controlled enviromnent such as that of a warehouse. Our implementation was able to learn the basic path following algorithm successfully, but a lot of the ideas of the original problem statement remain to be executed. Some of them include
+
+\begin{itemize}
+    \item Incorporating ultrasound sensors efficiently into the learning algorithm, so the bot also learns to avoid obstacles apart from following a predefined path.
+    \item Developing mechanisms for localization. This could be implemented by identifying landmarks in the path, such as intersections, and then trying to locate the current position of the bot.
+    \item Ability to interface other algorithms such as identifying the shortest path along with the core Q learning algorithm. This would facilitate greater control over the otherwise autonomous bot.
+    \item Better control of locomotion through more fine tuned controls for motor speeds. This would enable the bot to not only traverse flat surfaces, but also move efficiently in uneven terrains.
+\end{itemize}
+
 
 \bibliographystyle{apalike}
 \bibliography{references}
