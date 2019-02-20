@@ -1,5 +1,7 @@
 # RL-Car
 
+> THIS PROJECT IS NO LONGER MAINTAINED & MIGHT NOT WORK OUT OF THE BOX.
+
 This project implements OpenAI's gym like interface for V-Rep to train reinforecement learning aggents.
 
 Following two experiments were modeled on the aforementioned environment using Deep Q-Networks (DQN) in Keras,
