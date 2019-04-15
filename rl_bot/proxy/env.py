@@ -1,10 +1,12 @@
-# Import Libraries:
-import vrep
+import math
+import os
 import sys
 import time
-import numpy as np
-import math
+
 import matplotlib.pyplot as plt
+import numpy as np
+
+from rl_bot.vrep import vrep
 
 
 class RLBot(object):
@@ -63,10 +65,6 @@ class RLBot(object):
     def reset(self):
         # Restart the simulation
         stop = vrep.simxStopSimulation(
-            self.client_id, vrep.simx_opmode_blocking)
-        stop = vrep.simxStopSimulation(
-            self.client_id, vrep.simx_opmode_blocking)
-        start = vrep.simxStartSimulation(
             self.client_id, vrep.simx_opmode_blocking)
         start = vrep.simxStartSimulation(
             self.client_id, vrep.simx_opmode_blocking)
@@ -140,6 +138,5 @@ class RLBot(object):
 
         reward['light_sensor'] += r
         reward['proxy_sensor'] += r
-        # reward['combined'] += r
 
         return observations, reward
