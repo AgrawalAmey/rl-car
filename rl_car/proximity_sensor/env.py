@@ -9,7 +9,7 @@ import numpy as np
 from rl_bot.vrep import vrep
 
 
-class RLBot(object):
+class RLCar(object):
 
     def __init__(self):
         # just in case, close all opened connections

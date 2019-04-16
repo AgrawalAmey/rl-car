@@ -1,7 +1,7 @@
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 import numpy as np
-from env_ir import RLBot
+from env_ir import RLCar
 import matplotlib.pyplot as plt
 import pickle
 from keras.models import load_model, Sequential
@@ -9,7 +9,7 @@ from keras.layers import Dense, Activation
 
 
 def train():
-    env = RLBot()
+    env = RLCar()
 
     model = load_model('model_ir.hdf5')
 

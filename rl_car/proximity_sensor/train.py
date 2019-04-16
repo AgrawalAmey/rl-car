@@ -1,16 +1,16 @@
 import os
-import numpy as np
-from env import RLBot
-import matplotlib.pyplot as plt
 import pickle
+
 from keras.models import load_model, Sequential
 from keras.layers import Dense, Activation
+import matplotlib.pyplot as plt
+import numpy as np
 
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+from .env import RLCar
 
 
 def train():
-    env = RLBot()
+    env = RLCar()
 
     try:
         model = load_model('model_porxy.hdf5')
@@ -111,6 +111,8 @@ def train():
 
 
 if __name__ == '__main__':
+    os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
     try:
         train()
     except KeyboardInterrupt:
