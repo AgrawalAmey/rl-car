@@ -1,6 +1,6 @@
 set -x
 
-pushd rl_bot
+pushd rl_car
 
 rm -rf vrep
 mkdir vrep
