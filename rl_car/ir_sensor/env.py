@@ -7,7 +7,7 @@ import time
 import matplotlib.pyplot as plt
 import numpy as np
 
-from rl_bot.vrep import vrep
+from rl_car.vrep import vrep
 
 
 class RLCar(object):
